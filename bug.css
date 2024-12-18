@@ -1,0 +1,11 @@
+The following CSS rule has an unexpected behavior in some browsers:
+
+```css
+div {
+  margin: 10px auto;
+}
+```
+
+This is supposed to center the div horizontally. However, some older browsers might not interpret `auto` correctly when used with both `margin-left` and `margin-right`. This can result in the div not being centered.
+
+Another issue is with `box-sizing`.  If you're using `box-sizing: border-box;`, it's possible to have unexpected behavior with padding, border and margin interaction. This may lead to elements not rendering to the correct size or position, especially when nested.
